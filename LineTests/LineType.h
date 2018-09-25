@@ -1,5 +1,7 @@
 #pragma once
 
+
+//Building the Class
 class lineType {
 
 
@@ -12,15 +14,12 @@ private:
 
 public:
 
-	lineType(int a, int x, int b, int y, int c) {
+	//Constructor
+	lineType() {
 
-		aCo = a;
-		xCord = x;
-		bCo = b;
-		yCord = y;
-		cCo = c;
 	}
 
+	//Mutators 
 	void setXcofficent(int a) {
 
 		aCo = a;
@@ -46,6 +45,11 @@ public:
 		cCo = c;
 	}
 
+	int getXcofficent() {
+
+		return aCo;
+	}
+
 	int getXcord() {
 
 		return xCord;
@@ -66,8 +70,9 @@ public:
 		return cCo;
 	}
 
+	//Method Calls 
 	int slopeFunction(int a1, int a2, int b1, int b2, int c1, int c2);
 	int equalFunction(int a1, int a2, int b1, int b2, int c1, int c2);
-	int parallelFunction(int a1, int a2, int b1, int b2, int c1, int c2, int slope);
-	int perpendicularFunction(int a1, int a2, int b1, int b2, int c1, int c2);
+	int parallelFunction(int slope);
+	int perpendicularFunction(int slope, int x1, int x2, int y1, int y2);
 };
